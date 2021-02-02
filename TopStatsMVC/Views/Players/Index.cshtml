@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Player>
+
+<div class="players">
+    <div class="container">
+        <div class="stats__header">
+            <div class="stats__suptitle"><span class="stats__span">Best</span> players</div>
+            <div class="stats__title">Lorem ipsum dolor sit</div>
+        </div>
+        <div class="players__wrapper">
+            <div class="players__btn players__btn-prev">Prev</div>
+            <div class="players__btn players__btn-next">Next</div>
+            <div class="players__inner">
+                <div class="players__slide">
+                    @foreach (var player in Model)
+                    {
+                        <div class="player__card">
+                            <div class="player__img">
+                                <img src="Images/players/@(player.Position).png" class="player__photo">
+                            </div>
+                            <div class="player__descr">
+                                <div><b>Position: </b>@player.Position</div>
+                                <div><b>Nickname: </b>@player.Nickname</div>
+                                <div><b>Team: </b>@player.Team</div>
+                                <p class="player__about">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi doloribus cupiditate.
+                                </p>
+                                <a class="player__stat" asp-route-nick="@player.Nickname" asp-controller="Players">Stats</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="players__slide">
+                </div>
+                <div class="players__slide">
+                </div>
+            </div>
+        </div>
+        <div class="slider__dot-wrapper">
+            <div class="slider__dot slider__dot-active"></div>
+            <div class="slider__dot"></div>
+            <div class="slider__dot"></div>
+        </div>
+
+        <div class="teams">
+            <div class="teams__wrapper">
+                <div class="teams__inner">
+                    <div class="teams__slide">
+                        <img class="team__img" src="Images/teams/vitality.svg">
+                        <img class="team__img" src="Images/teams/navi.svg">
+                        <img class="team__img" src="Images/teams/astralis.svg">
+                        <img class="team__img" src="Images/teams/faze.svg">
+                        <img class="team__img" src="Images/teams/mousesports.svg">
+                    </div>
+                    <div class="teams__slide">
+                        <img class="team__img" src="Images/teams/navi.svg">
+                        <img class="team__img" src="Images/teams/big.svg">
+                        <img class="team__img" src="Images/teams/og.png">
+                        <img class="team__img" src="Images/teams/og.png">
+                        <img class="team__img" src="Images/teams/heroik.svg">
+                    </div>
+                    <div class="teams__slide">
+                        <img class="team__img" src="Images/teams/astralis.svg">
+                        <img class="team__img" src="Images/teams/astralis.svg">
+                        <img class="team__img" src="Images/teams/big.svg">
+                        <img class="team__img" src="Images/teams/fnatic.svg">
+                        <img class="team__img" src="Images/teams/g2.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

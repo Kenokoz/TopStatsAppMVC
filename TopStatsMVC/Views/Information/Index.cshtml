@@ -1,0 +1,96 @@
+﻿@model TopStatsMVC.Models.Player
+
+<div class="stats">
+    <div class="container">
+        <div class="stats__header">
+            <div class="stats__suptitle">
+                <span class="stats__span">Stats</span> of @Model.Nickname
+            </div>
+            <div class="stats__title">Last 10 matches:</div>
+        </div>
+        <form class="search search-stats" method="post">
+            <div class="search__error search__error-stats">Player is not found</div>
+            <input class="search__input search__input-stats" type="text" name="nick" placeholder="Nickname" />
+            <input class="search__btn search__btn-stats" value="GET Stats" type="submit" />
+        </form>
+        <div div class="stats__items">
+            <div class="player__card">
+                <div class="player__img">
+                    <img src="Images/players/@(Model.Position).png" class="player__photo">
+                </div>
+                <div class="player__descr">
+                    <div><b>Position: </b>@Model.Position</div>
+                    <div><b>Nickname: </b>@Model.Nickname</div>
+                    <div><b>Team: </b>@Model.Team</div>
+                    <div class="player__about">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi doloribus cupiditate.
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats__table">
+                @foreach (var row in Model.Games)
+                {
+                    @if (row.LostRounds < row.WonRounds)
+                    {
+                        ViewData["resultOfMatch"] = "Won";
+                    }
+                    else
+                    {
+                        ViewData["resultOfMatch"] = "Lost";
+                    }
+                    <div class="stats__row stats__row-@(ViewData["resultOfMatch"].ToString().ToLower())">
+                        <div class="stats__inner">
+                            <div class="stats__date">@row.Date</div>
+                            <div class="stats__res">
+
+                                <span class="@(ViewData["resultOfMatch"].ToString().ToLower())__span">@ViewData["resultOfMatch"]</span>
+                            </div>
+                            <div class="stats__score">@row.WonRounds/@row.LostRounds</div>
+                            <div class="stats__map">@row.MapName</div>
+                            <div class="stats__kda">@row.Kills/@row.Assists/@row.Deaths</div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="stats__select">
+                <div class="select__wrapper">
+                    <div class="select__title">
+                        Map
+                        <div class="select__arrow">Arrow</div>
+                    </div>
+                    <div class="wrapper__items">
+                        <div class="select__item">All maps</div>
+                        <div class="select__item">Dust 2</div>
+                        <div class="select__item">Mirage</div>
+                        <div class="select__item">Inferno</div>
+                        <div class="select__item">Train</div>
+                    </div>
+                </div>
+                <div class="select__wrapper">
+                    <div class="select__title">
+                        Result
+                        <div class="select__arrow">Arrow</div>
+                    </div>
+                    <div class="wrapper__items">
+                        <div class="select__item">All results</div>
+                        <div class="select__item">Won</div>
+                        <div class="select__item">Lost</div>
+                    </div>
+                </div>
+                <div class="select__wrapper">
+                    <div class="select__title">
+                        K/A/D
+                        <div class="select__arrow">Arrow</div>
+                    </div>
+                    <div class="wrapper__items">
+                        <div class="select__item">Positive</div>
+                        <div class="select__item">Negative</div>
+                    </div>
+                </div>
+                <div class="select__reset">Reset</div>
+            </div>
+        </div>
+    </div>
+</div>

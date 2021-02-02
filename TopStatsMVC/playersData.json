@@ -1,0 +1,491 @@
+[
+    {
+        "Position": 1,
+        "Nickname": "ZywOo",
+        "Team": "Vitality",
+        "Games": [
+            {
+                "MapName": "Dust 2",
+                "Date": "Dec 3 2020",
+                "WonRounds": 12,
+                "LostRounds": 16,
+                "Kills": 24,
+                "Deaths": 12,
+                "Assists": 7
+            },
+            {
+                "MapName": "Mirage",
+                "Date": "Dec 3 2020",
+                "WonRounds": 14,
+                "LostRounds": 16,
+                "Kills": 21,
+                "Deaths": 16,
+                "Assists": 4
+            },
+            {
+                "MapName": "Mirage",
+                "Date": "Dec 4 2020",
+                "WonRounds": 16,
+                "LostRounds": 16,
+                "Kills": 17,
+                "Deaths": 16,
+                "Assists": 2
+            },
+            {
+                "MapName": "Train",
+                "Date": "Dec 4 2020",
+                "WonRounds": 15,
+                "LostRounds": 19,
+                "Kills": 12,
+                "Deaths": 16,
+                "Assists": 6
+            },
+            {
+                "MapName": "Inferno",
+                "Date": "Dec 4 2020",
+                "WonRounds": 16,
+                "LostRounds": 14,
+                "Kills": 32,
+                "Deaths": 24,
+                "Assists": 4
+            },
+            {
+                "MapName": "Dust 2",
+                "Date": "Dec 5 2020",
+                "WonRounds": 19,
+                "LostRounds": 17,
+                "Kills": 21,
+                "Deaths": 16,
+                "Assists": 4
+            },
+            {
+                "MapName": "Dust 2",
+                "Date": "Dec 7 2020",
+                "WonRounds": 16,
+                "LostRounds": 8,
+                "Kills": 21,
+                "Deaths": 13,
+                "Assists": 4
+            },
+            {
+                "MapName": "Inferno",
+                "Date": "Dec 7 2020",
+                "WonRounds": 16,
+                "LostRounds": 14,
+                "Kills": 23,
+                "Deaths": 19,
+                "Assists": 1
+            },
+            {
+                "MapName": "Mirage",
+                "Date": "Dec 7 2020",
+                "WonRounds": 9,
+                "LostRounds": 16,
+                "Kills": 14,
+                "Deaths": 20,
+                "Assists": 2
+            },
+            {
+                "MapName": "Train",
+                "Date": "Dec 8 2020",
+                "WonRounds": 16,
+                "LostRounds": 6,
+                "Kills": 25,
+                "Deaths": 21,
+                "Assists": 7
+            }
+        ]
+    },
+
+    {
+        "Position": 2,
+        "Nickname": "s1mple",
+        "Team": "Natus Vincere",
+        "Games": [
+            {
+                "MapName": "Dust 2",
+                "Date": "Dec 3 2020",
+                "WonRounds": 10,
+                "LostRounds": 16,
+                "Kills": 33,
+                "Deaths": 19,
+                "Assists": 7
+            },
+            {
+                "MapName": "Train",
+                "Date": "Dec 3 2020",
+                "WonRounds": 16,
+                "LostRounds": 13,
+                "Kills": 21,
+                "Deaths": 16,
+                "Assists": 4
+            },
+            {
+                "MapName": "Mirage",
+                "Date": "Dec 4 2020",
+                "WonRounds": 16,
+                "LostRounds": 8,
+                "Kills": 24,
+                "Deaths": 17,
+                "Assists": 2
+            },
+            {
+                "MapName": "Train",
+                "Date": "Dec 4 2020",
+                "WonRounds": 11,
+                "LostRounds": 16,
+                "Kills": 18,
+                "Deaths": 14,
+                "Assists": 6
+            },
+            {
+                "MapName": "Inferno",
+                "Date": "Dec 4 2020",
+                "WonRounds": 12,
+                "LostRounds": 16,
+                "Kills": 32,
+                "Deaths": 24,
+                "Assists": 2
+            },
+            {
+                "MapName": "Train",
+                "Date": "Dec 5 2020",
+                "WonRounds": 16,
+                "LostRounds": 13,
+                "Kills": 22,
+                "Deaths": 13,
+                "Assists": 3
+            },
+            {
+                "MapName": "Dust 2",
+                "Date": "Dec 7 2020",
+                "WonRounds": 16,
+                "LostRounds": 12,
+                "Kills": 35,
+                "Deaths": 18,
+                "Assists": 3
+            },
+            {
+                "MapName": "Dust 2",
+                "Date": "Dec 7 2020",
+                "WonRounds": 16,
+                "LostRounds": 7,
+                "Kills": 23,
+                "Deaths": 10,
+                "Assists": 1
+            },
+            {
+                "MapName": "Mirage",
+                "Date": "Dec 7 2020",
+                "WonRounds": 10,
+                "LostRounds": 16,
+                "Kills": 24,
+                "Deaths": 17,
+                "Assists": 2
+            },
+            {
+                "MapName": "Dust 2",
+                "Date": "Dec 8 2020",
+                "WonRounds": 16,
+                "LostRounds": 9,
+                "Kills": 25,
+                "Deaths": 21,
+                "Assists": 7
+            }
+        ]
+    },
+
+    {
+        "Position": 3,
+        "Nickname": "device",
+        "Team": "Astralis",
+        "Games": [
+            {
+                "MapName": "Mirage",
+                "Date": "Dec 3 2020",
+                "WonRounds": 16,
+                "LostRounds": 9,
+                "Kills": 15,
+                "Deaths": 17,
+                "Assists": 4
+            },
+            {
+                "MapName": "Dust 2",
+                "Date": "Dec 3 2020",
+                "WonRounds": 16,
+                "LostRounds": 9,
+                "Kills": 19,
+                "Deaths": 12,
+                "Assists": 2
+            },
+            {
+                "MapName": "Inferno",
+                "Date": "Dec 4 2020",
+                "WonRounds": 19,
+                "LostRounds": 15,
+                "Kills": 25,
+                "Deaths": 13,
+                "Assists": 5
+            },
+            {
+                "MapName": "Mirage",
+                "Date": "Dec 4 2020",
+                "WonRounds": 13,
+                "LostRounds": 16,
+                "Kills": 26,
+                "Deaths": 23,
+                "Assists": 3
+            },
+            {
+                "MapName": "Inferno",
+                "Date": "Dec 4 2020",
+                "WonRounds": 11,
+                "LostRounds": 16,
+                "Kills": 32,
+                "Deaths": 24,
+                "Assists": 2
+            },
+            {
+                "MapName": "Train",
+                "Date": "Dec 5 2020",
+                "WonRounds": 16,
+                "LostRounds": 12,
+                "Kills": 26,
+                "Deaths": 18,
+                "Assists": 4
+            },
+            {
+                "MapName": "Mirage",
+                "Date": "Dec 7 2020",
+                "WonRounds": 12,
+                "LostRounds": 16,
+                "Kills": 35,
+                "Deaths": 18,
+                "Assists": 3
+            },
+            {
+                "MapName": "Dust 2",
+                "Date": "Dec 7 2020",
+                "WonRounds": 16,
+                "LostRounds": 6,
+                "Kills": 21,
+                "Deaths": 10,
+                "Assists": 1
+            },
+            {
+                "MapName": "Dust 2",
+                "Date": "Dec 7 2020",
+                "WonRounds": 9,
+                "LostRounds": 16,
+                "Kills": 24,
+                "Deaths": 25,
+                "Assists": 2
+            },
+            {
+                "MapName": "Train",
+                "Date": "Dec 8 2020",
+                "WonRounds": 16,
+                "LostRounds": 9,
+                "Kills": 29,
+                "Deaths": 21,
+                "Assists": 7
+            }
+        ]
+    },
+
+    {
+        "Position": 4,
+        "Nickname": "NiKo",
+        "Team": "FaZe",
+        "Games": [
+            {
+                "MapName": "Mirage",
+                "Date": "Dec 3 2020",
+                "WonRounds": 16,
+                "LostRounds": 13,
+                "Kills": 26,
+                "Deaths": 14,
+                "Assists": 3
+            },
+            {
+                "MapName": "Mirage",
+                "Date": "Dec 3 2020",
+                "WonRounds": 16,
+                "LostRounds": 8,
+                "Kills": 26,
+                "Deaths": 12,
+                "Assists": 6
+            },
+            {
+                "MapName": "Inferno",
+                "Date": "Dec 4 2020",
+                "WonRounds": 14,
+                "LostRounds": 16,
+                "Kills": 22,
+                "Deaths": 21,
+                "Assists": 1
+            },
+            {
+                "MapName": "Mirage",
+                "Date": "Dec 4 2020",
+                "WonRounds": 16,
+                "LostRounds": 14,
+                "Kills": 17,
+                "Deaths": 21,
+                "Assists": 6
+            },
+            {
+                "MapName": "Dust 2",
+                "Date": "Dec 4 2020",
+                "WonRounds": 16,
+                "LostRounds": 5,
+                "Kills": 19,
+                "Deaths": 13,
+                "Assists": 7
+            },
+            {
+                "MapName": "Train",
+                "Date": "Dec 5 2020",
+                "WonRounds": 13,
+                "LostRounds": 16,
+                "Kills": 29,
+                "Deaths": 19,
+                "Assists": 6
+            },
+            {
+                "MapName": "Mirage",
+                "Date": "Dec 7 2020",
+                "WonRounds": 12,
+                "LostRounds": 16,
+                "Kills": 35,
+                "Deaths": 18,
+                "Assists": 3
+            },
+            {
+                "MapName": "Dust 2",
+                "Date": "Dec 7 2020",
+                "WonRounds": 16,
+                "LostRounds": 6,
+                "Kills": 21,
+                "Deaths": 10,
+                "Assists": 4
+            },
+            {
+                "MapName": "Inferno",
+                "Date": "Dec 7 2020",
+                "WonRounds": 11,
+                "LostRounds": 16,
+                "Kills": 24,
+                "Deaths": 25,
+                "Assists": 2
+            },
+            {
+                "MapName": "Train",
+                "Date": "Dec 8 2020",
+                "WonRounds": 16,
+                "LostRounds": 9,
+                "Kills": 22,
+                "Deaths": 19,
+                "Assists": 3
+            }
+        ]
+    },
+
+    {
+        "Position": 5,
+        "Nickname": "ropz",
+        "Team": "Mousesports",
+        "Games": [
+            {
+                "MapName": "Train",
+                "Date": "Dec 3 2020",
+                "WonRounds": 8,
+                "LostRounds": 16,
+                "Kills": 14,
+                "Deaths": 22,
+                "Assists": 5
+            },
+            {
+                "MapName": "Dust 2",
+                "Date": "Dec 3 2020",
+                "WonRounds": 16,
+                "LostRounds": 9,
+                "Kills": 22,
+                "Deaths": 18,
+                "Assists": 7
+            },
+            {
+                "MapName": "Mirage",
+                "Date": "Dec 4 2020",
+                "WonRounds": 16,
+                "LostRounds": 13,
+                "Kills": 26,
+                "Deaths": 25,
+                "Assists": 7
+            },
+            {
+                "MapName": "Dust 2",
+                "Date": "Dec 4 2020",
+                "WonRounds": 16,
+                "LostRounds": 14,
+                "Kills": 18,
+                "Deaths": 14,
+                "Assists": 6
+            },
+            {
+                "MapName": "Inferno",
+                "Date": "Dec 4 2020",
+                "WonRounds": 6,
+                "LostRounds": 16,
+                "Kills": 18,
+                "Deaths": 17,
+                "Assists": 2
+            },
+            {
+                "MapName": "Train",
+                "Date": "Dec 5 2020",
+                "WonRounds": 16,
+                "LostRounds": 13,
+                "Kills": 24,
+                "Deaths": 21,
+                "Assists": 0
+            },
+            {
+                "MapName": "Mirage",
+                "Date": "Dec 7 2020",
+                "WonRounds": 16,
+                "LostRounds": 14,
+                "Kills": 20,
+                "Deaths": 18,
+                "Assists": 3
+            },
+            {
+                "MapName": "Inferno",
+                "Date": "Dec 7 2020",
+                "WonRounds": 16,
+                "LostRounds": 10,
+                "Kills": 26,
+                "Deaths": 15,
+                "Assists": 4
+            },
+            {
+                "MapName": "Mirage",
+                "Date": "Dec 7 2020",
+                "WonRounds": 12,
+                "LostRounds": 16,
+                "Kills": 16,
+                "Deaths": 19,
+                "Assists": 2
+            },
+            {
+                "MapName": "Dust 2",
+                "Date": "Dec 8 2020",
+                "WonRounds": 16,
+                "LostRounds": 13,
+                "Kills": 29,
+                "Deaths": 18,
+                "Assists": 2
+            }
+        ]
+    }
+]
