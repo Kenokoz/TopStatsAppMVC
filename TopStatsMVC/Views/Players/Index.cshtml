@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Player>
+﻿@model List<Player>
 
 <div class="players">
     <div class="container">
@@ -10,29 +10,43 @@
             <div class="players__btn players__btn-prev">Prev</div>
             <div class="players__btn players__btn-next">Next</div>
             <div class="players__inner">
-                <div class="players__slide">
-                    @foreach (var player in Model)
+                @{
+                    int j = 0;
+                    for (int i = 1; i < 4; i++)
                     {
-                        <div class="player__card">
-                            <div class="player__img">
-                                <img src="Images/players/@(player.Position).png" class="player__photo">
-                            </div>
-                            <div class="player__descr">
-                                <div><b>Position: </b>@player.Position</div>
-                                <div><b>Nickname: </b>@player.Nickname</div>
-                                <div><b>Team: </b>@player.Team</div>
-                                <p class="player__about">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi doloribus cupiditate.
-                                </p>
-                                <a class="player__stat" asp-route-nick="@player.Nickname" asp-controller="Players">Stats</a>
-                            </div>
+                        <div class="players__slide">
+                            @while(j < 15)
+                            {
+                                <div class="player__card">
+                                    <div class="player__img">
+                                        <img src="Images/players/@(Model[j].Position).png" class="player__photo">
+                                    </div>
+                                    <div class="player__descr">
+                                        <div><b>Position: </b>@Model[j].Position</div>
+                                        <div><b>Nickname: </b>@Model[j].Nickname</div>
+                                        <div><b>Team: </b>@Model[j].Team</div>
+                                        <p class="player__about">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi doloribus cupiditate.
+                                        </p>
+                                        <a class="player__stat" asp-route-nick="@Model[j].Nickname" asp-controller="Players">Stats</a>
+                                    </div>
+                                </div>
+                                if (j == 4)
+                                {
+                                    j = 5;
+                                    break;
+                                }
+                                else if (j == 9)
+                                {
+                                    j = 10;
+                                    break;
+                                }
+                                j++;
+
+                            }
                         </div>
                     }
-                </div>
-                <div class="players__slide">
-                </div>
-                <div class="players__slide">
-                </div>
+                }
             </div>
         </div>
         <div class="slider__dot-wrapper">

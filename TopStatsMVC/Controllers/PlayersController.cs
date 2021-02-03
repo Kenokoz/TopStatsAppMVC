@@ -30,7 +30,9 @@ namespace TopStatsMVC.Controllers
             }
             else
             {
-                var player = db.Players.Include(g => g.Games).Where(p => p.Nickname == nick).Single();
+                var player = db.Players.Include(g => g.Games)
+                                        .Where(p => p.Nickname.ToLower() == nick.ToLower())
+                                        .Single();
                 return View("../Information/Index", player);
             }
             
