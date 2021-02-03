@@ -36,7 +36,7 @@ namespace TopStatsMVC.Controllers
             {
                 return NotFound();
             }
-            return View(Player);
+            return PartialView("_Card", Player);
         }
     }
 }

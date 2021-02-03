@@ -7,16 +7,6 @@ wrappers.forEach((wrapper, i) => {
             if (e.target.classList.contains("select__item")) {
                 wrapper.querySelector(".select__title").innerHTML =
                     e.target.innerText + arrowElem;
-
-                switch (i) {
-                    case 0:
-                        showSelectedRowsByMap();
-                        break;
-
-                    case 1:
-                        showSelectedRowsByRes();
-                        break;
-                }
             }
         } else {
             wrapper.classList.add("active");
@@ -24,32 +14,6 @@ wrappers.forEach((wrapper, i) => {
     });
 });
 
-function showSelectedRowsByMap() {
-    const mapsOfRow = document.querySelectorAll(".stats__map");
-    const mapTitle = document.querySelectorAll(".select__title")[0].innerText;
-    mapsOfRow.forEach(map => {
-        const row = map.parentElement.parentElement;
-        if (!mapTitle.includes(map.innerText) && !mapTitle.includes("All")) {
-            row.style.display = "none";
-        } else {
-            row.style.display = "block";
-        }
-    });
-}
-
-function showSelectedRowsByRes() {
-    const resultsOfRow = document.querySelectorAll(".stats__res");
-    const resultTitle = document.querySelectorAll(".select__title")[1].innerText;
-    resultsOfRow.forEach(res => {
-        const row = res.parentElement.parentElement;
-
-        if (!resultTitle.includes(res.innerText) && !resultTitle.includes("All")) {
-            row.style.display = "none";
-        } else {
-            row.style.display = "block";
-        }
-    });
-}
 
 // Reset
 

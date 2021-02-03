@@ -15,7 +15,7 @@
                     for (int i = 1; i < 4; i++)
                     {
                         <div class="players__slide">
-                            @while(j < 15)
+                            @while (j < 15)
                             {
                                 <div class="player__card">
                                     <div class="player__img">
@@ -28,7 +28,7 @@
                                         <p class="player__about">
                                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi doloribus cupiditate.
                                         </p>
-                                        <a class="player__stat" asp-route-nick="@Model[j].Nickname" asp-controller="Players">Stats</a>
+                                        <a class="player__stat" asp-route-nick="@Model[j].Nickname" asp-controller="Players" asp-action="Index">Stats</a>
                                     </div>
                                 </div>
                                 if (j == 4)
@@ -84,3 +84,5 @@
         </div>
     </div>
 </div>
+
+<script src="~/js/modules/slider.js"></script>

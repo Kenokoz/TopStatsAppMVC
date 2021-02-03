@@ -8,28 +8,18 @@
             </div>
             <div class="stats__title">Last 10 matches:</div>
         </div>
-        <form class="search search-stats" method="post">
+        <form class="search search-stats" id="info__form" asp-action="index" asp-controller="Information" method="POST" data-ajax="true" data-ajax-mode="replace" data-ajax-update="#info__card">
             <div class="search__error search__error-stats">Player is not found</div>
             <input class="search__input search__input-stats" type="text" name="nick" placeholder="Nickname" />
             <input class="search__btn search__btn-stats" value="GET Stats" type="submit" />
         </form>
         <div div class="stats__items">
-            <div class="player__card">
-                <div class="player__img">
-                    <img src="Images/players/@(Model.Position).png" class="player__photo">
-                </div>
-                <div class="player__descr">
-                    <div><b>Position: </b>@Model.Position</div>
-                    <div><b>Nickname: </b>@Model.Nickname</div>
-                    <div><b>Team: </b>@Model.Team</div>
-                    <div class="player__about">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi doloribus cupiditate.
-                    </div>
-                </div>
+            <div id="info__card" class="player__card">
+                @Html.Partial("_Card")
             </div>
 
             <div class="stats__table">
-                @foreach (var row in Model.Games)
+                @foreach (var row in Model.Games.OrderByDescending(g => g.Date))
                 {
                     @if (row.LostRounds < row.WonRounds)
                     {
@@ -94,3 +84,7 @@
         </div>
     </div>
 </div>
+
+<script src="~/js/jquery/jquery.js"></script>
+<script src="~/js/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+<script src="~/js/modules/select.js"></script>
