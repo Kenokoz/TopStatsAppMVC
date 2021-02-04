@@ -15,8 +15,15 @@ wrappers.forEach((wrapper, i) => {
     });
 });
 
+// Reset input
+document.querySelector(".search__btn-stats").addEventListener("click", () => {
+    setTimeout(() => {
+        document.querySelector(".search-stats").reset();
+    }, 40)
+});
 
-// Reset
+
+// Reset btn
 
 function resetTitleOfSelect() {
     const selectTitles = document.querySelectorAll(".select__title");

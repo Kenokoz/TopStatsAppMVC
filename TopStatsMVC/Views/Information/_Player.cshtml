@@ -1,0 +1,9 @@
+﻿@model TopStatsMVC.Models.Player
+
+<div class="player__card">
+    @Html.Partial("_Card")
+</div>
+
+<div id="table" class="stats__table">
+    @Html.Partial("_Table", Model.Games)
+</div>

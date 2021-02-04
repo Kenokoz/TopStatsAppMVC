@@ -1,5 +1,4 @@
-﻿@model TopStatsMVC.Models.Player
-
+﻿
 <div class="intro">
     <div class="container">
         <div class="intro__inner">
@@ -8,7 +7,7 @@
             <form class="search" method="post">
                 <div class="search__error">Player is not found</div>
                 <input class="search__input" type="text" name="nick" placeholder="Nickname"/>
-                <input class="search__btn" value="GET Stats" type="submit" asp-controller="Information" asp-action="Index"/>
+                <input class="search__btn" value="GET Stats" type="submit" asp-controller="Information" asp-action="Stats"/>
             </form>
         </div>
     </div>

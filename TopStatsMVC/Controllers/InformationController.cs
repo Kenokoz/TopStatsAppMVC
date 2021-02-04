@@ -20,6 +20,13 @@ namespace TopStatsMVC.Controllers
         [BindProperty]
         public Player Player { get; set; } = new Player();
 
+        public IActionResult Stats(string nick)
+        {
+            Player = db.Players.Include(g => g.Games)
+                               .Where(p => p.Nickname.ToLower() == nick.ToLower())
+                               .Single();
+            return View("Index", Player);
+        }
 
         [HttpGet]
         public IActionResult Index()
@@ -36,7 +43,7 @@ namespace TopStatsMVC.Controllers
             {
                 return NotFound();
             }
-            return View(Player);
+            return PartialView("_Player", Player);
         }
 
         [HttpPost]
