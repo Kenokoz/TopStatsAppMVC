@@ -34,9 +34,6 @@
     <None Include="wwwroot\Images\teams\navi.svg" />
     <None Include="wwwroot\Images\teams\vitality.svg" />
     <None Include="wwwroot\js\modules\header.js" />
-    <None Include="wwwroot\js\modules\rows.js" />
-    <None Include="wwwroot\js\modules\select.js" />
-    <None Include="wwwroot\js\modules\slider.js" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>

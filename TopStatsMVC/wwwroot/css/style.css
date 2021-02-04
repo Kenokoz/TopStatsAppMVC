@@ -601,25 +601,26 @@ h1,h2,h3,h4,h5,h6{
     margin-top: 0;
 }
 
-.wrapper__items{
+.wrapper__items {
     display: none;
 
     font-size: 15px;
     font-style: italic;
     color: black;
-
     cursor: pointer;
 }
 
-.select__item{
-    padding: 4px 0;
-    margin-top: 1px;
-
-    border: 2px solid  black;
-    border-radius: 5px;
-
+.select__item {
+    width: 210px;
+    height: 30px;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
     background-color: rgb(233, 233, 233);
-
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 1px;
+    cursor: pointer;
 }
 
 
@@ -636,12 +637,14 @@ h1,h2,h3,h4,h5,h6{
 
 .select__reset {
     font-size: 18px;
-    text-decoration: underline;
+    border: 1px solid black;
+    border-radius: 3px;
     cursor: pointer;
-    transition: color .1s linear;
+    transition: all .1s linear;
 }
 
 .select__reset:hover {
+    border-color: #ce9d41;
     color: #ce9d41;
 }
 

@@ -1,4 +1,4 @@
-const slides = document.querySelectorAll(".players__slide");
+﻿const slides = document.querySelectorAll(".players__slide");
 const next = document.querySelector(".players__btn-next");
 const prev = document.querySelector(".players__btn-prev");
 const slidesField = document.querySelector(".players__inner");
