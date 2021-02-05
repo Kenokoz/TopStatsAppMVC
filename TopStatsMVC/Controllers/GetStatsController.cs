@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using TopStatsMVC.Models;
 
@@ -19,10 +20,32 @@ namespace TopStatsMVC.Controllers
             this.db = db;
         }
 
+        [BindProperty]
+        public Player Player { get; set; }
+
+        [HttpGet]
         public IActionResult Index()
         {
             LoadData();
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Index(string nick)
+        {
+            try
+            {
+                Player = db.Players.Include(g => g.Games)
+                                   .Where(p => p.Nickname.ToLower() == nick.ToLower())
+                                   .Single();
+                return RedirectToAction("Stats", "Information", new { nick });
+            }
+            catch (Exception)
+            {
+                Player = new Player { Id = -1 };
+                return View(Player);
+            }
+
         }
 
         private void LoadData()

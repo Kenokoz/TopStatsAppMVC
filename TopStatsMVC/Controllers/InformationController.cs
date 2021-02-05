@@ -22,18 +22,10 @@ namespace TopStatsMVC.Controllers
 
         public IActionResult Stats(string nick)
         {
-            try
-            {
-                Player = db.Players.Include(g => g.Games)
-                               .Where(p => p.Nickname.ToLower() == nick.ToLower())
-                               .Single();
-                return View("Index", Player);
-            }
-            catch (Exception)
-            {
-                return PartialView("../GetStats/_ErrorFind", Player);
-            }
-            
+            Player = db.Players.Include(g => g.Games)
+                            .Where(p => p.Nickname.ToLower() == nick.ToLower())
+                            .Single();
+            return View("Index", Player);
         }
 
         [HttpGet]
@@ -46,9 +38,10 @@ namespace TopStatsMVC.Controllers
         [HttpPost]
         public IActionResult Index(string nick)
         {   
-            Player = db.Players.Include(g => g.Games).FirstOrDefault(p => p.Nickname == nick);
+            Player = db.Players.Include(g => g.Games).FirstOrDefault(p => p.Nickname.ToLower() == nick.ToLower());
             if (Player == null)
             {
+                Player = new Player { Id = -1 };
                 return PartialView("_ErrorFind");
             }
             return PartialView("_StatsItems", Player);

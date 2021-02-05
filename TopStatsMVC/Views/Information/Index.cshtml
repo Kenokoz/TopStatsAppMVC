@@ -9,7 +9,6 @@
             <div class="stats__title">Last 10 matches:</div>
         </div>
         <form class="search search-stats" asp-action="Index" asp-controller="Information" method="POST" data-ajax="true" data-ajax-mode="replace" data-ajax-update="#statsItems">
-            <div class="search__error search__error-stats">Player is not found</div>
             <input class="search__input search__input-stats" type="text" name="nick" placeholder="Nickname" />
             <input class="search__btn search__btn-stats" value="GET Stats" type="submit" />
         </form>
