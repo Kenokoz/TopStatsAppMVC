@@ -33,7 +33,6 @@
     <None Include="wwwroot\Images\teams\mousesports.svg" />
     <None Include="wwwroot\Images\teams\navi.svg" />
     <None Include="wwwroot\Images\teams\vitality.svg" />
-    <None Include="wwwroot\js\modules\header.js" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
