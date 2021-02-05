@@ -8,51 +8,15 @@
             </div>
             <div class="stats__title">Last 10 matches:</div>
         </div>
-        <form class="search search-stats" asp-action="Index" asp-controller="Information" method="POST" data-ajax="true" data-ajax-mode="replace" data-ajax-update="#player">
+        <form class="search search-stats" asp-action="Index" asp-controller="Information" method="POST" data-ajax="true" data-ajax-mode="replace" data-ajax-update="#statsItems">
             <div class="search__error search__error-stats">Player is not found</div>
             <input class="search__input search__input-stats" type="text" name="nick" placeholder="Nickname" />
             <input class="search__btn search__btn-stats" value="GET Stats" type="submit" />
         </form>
-        <div div class="stats__items">
-            <div id="player" style="display:contents">
-                @Html.Partial("_Player", Model)
-            </div>
+        <div id="statsItems" class="stats__items">
 
-            <form class="stats__select" asp-action="OnSelectItem" asp-controller="Information" method="POST" data-ajax="true" data-ajax-mode="replace" data-ajax-update="#table">
-                <div class="select__wrapper">
-                    <div class="select__title">
-                        Map
-                        <div class="select__arrow">Arrow</div>
-                    </div>
-                    <div class="wrapper__items">
-                        <input class="select__item" type="submit" name="map" value="Dust 2"/>
-                        <input class="select__item" type="submit" name="map" value="Mirage" />
-                        <input class="select__item" type="submit" name="map" value="Inferno" />
-                        <input class="select__item" type="submit" name="map" value="Train" />
-                    </div>
-                </div>
-                <div class="select__wrapper">
-                    <div class="select__title">
-                        Result
-                        <div class="select__arrow">Arrow</div>
-                    </div>
-                    <div class="wrapper__items">
-                        <input class="select__item" type="submit" name="result" value="Won" />
-                        <input class="select__item" type="submit" name="result" value="Lost" />
-                    </div>
-                </div>
-                <div class="select__wrapper">
-                    <div class="select__title">
-                        K/A/D
-                        <div class="select__arrow">Arrow</div>
-                    </div>
-                    <div class="wrapper__items">
-                        <input class="select__item" type="submit" name="kda" value="Positive" />
-                        <input class="select__item" type="submit" name="kda" value="Negative" />
-                    </div>
-                </div>
-                <input class="select__reset" type="submit" value="Reset"/>
-            </form>
+            @Html.Partial("_StatsItems", Model)
+
         </div>
     </div>
 </div>

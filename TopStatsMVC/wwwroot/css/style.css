@@ -160,7 +160,6 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .search__error{
-    opacity: 0;
     font-size: 20px;
     color: rgb(211, 45, 45);
 }

@@ -18,14 +18,22 @@ namespace TopStatsMVC.Controllers
         }
 
         [BindProperty]
-        public Player Player { get; set; } = new Player();
+        public Player Player { get; set; }
 
         public IActionResult Stats(string nick)
         {
-            Player = db.Players.Include(g => g.Games)
+            try
+            {
+                Player = db.Players.Include(g => g.Games)
                                .Where(p => p.Nickname.ToLower() == nick.ToLower())
                                .Single();
-            return View("Index", Player);
+                return View("Index", Player);
+            }
+            catch (Exception)
+            {
+                return PartialView("../GetStats/_ErrorFind", Player);
+            }
+            
         }
 
         [HttpGet]
@@ -37,19 +45,19 @@ namespace TopStatsMVC.Controllers
 
         [HttpPost]
         public IActionResult Index(string nick)
-        {
+        {   
             Player = db.Players.Include(g => g.Games).FirstOrDefault(p => p.Nickname == nick);
             if (Player == null)
             {
-                return NotFound();
+                return PartialView("_ErrorFind");
             }
-            return PartialView("_Player", Player);
+            return PartialView("_StatsItems", Player);
         }
 
         [HttpPost]
-        public IActionResult OnSelectItem(string map, string result, string kda)
+        public IActionResult OnSelectItem(string nick, string map, string result, string kda)
         {
-            List<Game> games = db.Players.Include(g => g.Games).FirstOrDefault().Games;
+            List<Game> games = db.Players.Include(g => g.Games).FirstOrDefault(p => p.Nickname == nick).Games;
             List<Game> rows = new List<Game>();
 
             if (map != null)

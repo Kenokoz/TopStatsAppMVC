@@ -1,0 +1,48 @@
+﻿@model TopStatsMVC.Models.Player
+
+<div class="player__card">
+    @Html.Partial("_Card")
+</div>
+
+<div id="table" class="stats__table">
+    @Html.Partial("_Table", Model.Games)
+</div>
+
+<form class="stats__select" asp-action="OnSelectItem" asp-controller="Information" method="POST" data-ajax="true" data-ajax-mode="replace" data-ajax-update="#table">
+    <div id="select__wrapper-map" class="select__wrapper">
+        <div class="select__title">
+            Map
+            <div class="select__arrow">Arrow</div>
+        </div>
+        <div class="wrapper__items">
+
+            <input class="select__item" type="submit" name="map" value="Dust 2" />
+            <input class="select__item" type="submit" name="map" value="Mirage" />
+            <input class="select__item" type="submit" name="map" value="Inferno" />
+            <input class="select__item" type="submit" name="map" value="Train" />
+        </div>
+    </div>
+    <div id="select__wrapper-result" class="select__wrapper">
+        <div class="select__title">
+            Result
+            <div class="select__arrow">Arrow</div>
+        </div>
+        <div class="wrapper__items">
+            <input class="select__item" type="submit" name="result" value="Won" />
+            <input class="select__item" type="submit" name="result" value="Lost" />
+        </div>
+    </div>
+    <div id="select__wrapper-kda" class="select__wrapper">
+        <div class="select__title">
+            K/A/D
+            <div class="select__arrow">Arrow</div>
+        </div>
+        <div class="wrapper__items">
+            <input class="select__item" type="submit" name="kda" value="Positive" />
+            <input class="select__item" type="submit" name="kda" value="Negative" />
+        </div>
+    </div>
+    <input class="select__reset" type="submit" value="Reset" />
+    <input name="nick" type="hidden" value="@Model.Nickname" />
+</form>
+
