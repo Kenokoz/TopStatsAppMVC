@@ -33,19 +33,16 @@ namespace TopStatsMVC.Controllers
         [HttpPost]
         public IActionResult Index(string nick)
         {
-            try
+            Player = db.Players.Include(g => g.Games).FirstOrDefault(p => p.Nickname.ToLower() == nick.ToLower());
+            if (Player != null)
             {
-                Player = db.Players.Include(g => g.Games)
-                                   .Where(p => p.Nickname.ToLower() == nick.ToLower())
-                                   .Single();
                 return RedirectToAction("Stats", "Information", new { nick });
             }
-            catch (Exception)
+            else
             {
                 Player = new Player { Id = -1 };
                 return View(Player);
             }
-
         }
 
         private void LoadData()

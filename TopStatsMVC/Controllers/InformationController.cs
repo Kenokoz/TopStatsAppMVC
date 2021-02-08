@@ -22,9 +22,7 @@ namespace TopStatsMVC.Controllers
 
         public IActionResult Stats(string nick)
         {
-            Player = db.Players.Include(g => g.Games)
-                            .Where(p => p.Nickname.ToLower() == nick.ToLower())
-                            .Single();
+            Player = db.Players.Include(g => g.Games).FirstOrDefault(p => p.Nickname.ToLower() == nick.ToLower());
             return View("Index", Player);
         }
 
